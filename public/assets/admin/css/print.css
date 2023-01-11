@@ -1,0 +1,37 @@
+@page {
+	size: A4;
+	margin: 15mm;
+	margin-top: 15mm;
+	margin-bottom: 10mm;
+}
+
+@media print {
+	body {margin: 0 !important; padding: 0 !important; overflow:visible; color: black !important;}
+    table{ width: 100%; border-color: black !important; }
+	th{font-weight: bold !important; border-color: black !important; }
+	td,th{padding:1.5mm !important;page-break-inside: avoid; border-color: black !important; }
+	table.table-print{width:100% !important;}
+	table.table-print thead {display: table-header-group;} 
+	table.table-print tfoot {display: table-footer-group;}
+	button {display: none;}
+    .single-page{ page-break-after: always; }
+    table, table tr, table th, table td{ color: black; }
+    table, table.no-border tr, table.no-border th, table.no-border td{ border: 0 !important; }
+    table.table-bordered, table.table-bordered tr, table.table-bordered th, table.table-bordered td{ border-color: black !important; }
+    table.align-top td{
+        vertical-align: top !important;
+    }
+    table.align-middle td{
+        vertical-align: middle !important;
+    }
+    table.align-bottom td{
+        vertical-align: bottom !important;
+    }
+    .print-pt-5{
+        padding-top: 5px;
+    }
+
+    .pack_list .hide-pack{ display: none !important; }
+	/*.page-footer{display: table-footer-group; }*/
+	/*.page-header{ display: block; }*/
+}
